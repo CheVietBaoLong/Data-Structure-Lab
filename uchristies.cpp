@@ -17,5 +17,5 @@ int main() {
 
 	double price_for_coin{ sell_in_auction(double_eagle) };
 
-	std::cout << "The University's endownment now has $" << price_for_coin << " more money.\n";
+	std::cout << "The University's endowment now has $" << price_for_coin << " more money.\n";
 }
