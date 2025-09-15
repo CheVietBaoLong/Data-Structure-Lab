@@ -148,7 +148,7 @@ private:
 	std::string container_address;
 	double container_max_volume;
 	double used_volume{0.0};
-	std::vector<T> manifest_list;
+	std::vector<Shippable> manifest_list;
 };
 
 #endif
