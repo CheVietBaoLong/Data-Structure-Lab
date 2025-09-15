@@ -87,16 +87,21 @@ private:
  * A Teu is a shipping container that can hold
  * any type of Shippable item.
  *
- * \tparam T The type of item to be shipped.
+ * \tparam ShippableItem The type of item to be shipped.
  */
 
-template <typename T>
+template <typename ShippableItem>
 class Teu {
 public:
 	Teu(std::string address, double max_volume)
 		: container_address(address), container_max_volume(max_volume) {
 	};
-
+	/*
+	* get_manifest()
+	* 
+	* A get_manifest() function that returns a comma-separated
+	* list of the names of all items in the container.
+	*/
 	std::string get_manifest() const {
 		std::string manifest;
 		for (int i = 0; i < manifest_list.size(); ++i) {
@@ -108,7 +113,11 @@ public:
 		return manifest;
 	};
 
-	bool add_to_container(const T& to_ship) {
+	/*
+	* add_to_container() function that takes a ShippableItem
+	* and adds it to the container if there is enough volume remaining
+	*/
+	bool add_to_container(const ShippableItem& to_ship) {
 		int count = 0;
 		for (int i = 0; i < manifest_list.size(); ++i) {
 			if (manifest_list[i].get_name() == to_ship.get_name()) {
@@ -127,7 +136,9 @@ public:
 		}
 		return false;
 	}
-
+	/*
+	* get_tonnage() function that returns the total volume of all items in the container.
+	*/
 	double get_tonnage() const {
 		return used_volume;
 
