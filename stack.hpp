@@ -57,7 +57,6 @@ public:
                 push(temp.pop());
             }
         }
-        return *this;
     }
 
     // Push: adds an element to the top
