@@ -4,6 +4,8 @@
 #include <1klies/sort.hpp>
 #include <cassert>
 #include <iostream>
+#include <algorithm>
+#include <cstddef>
 
 template <typename Type> class Quicksorter : public Sorter<Type> {
 public:

@@ -4,6 +4,8 @@
 #include <1klies/sort.hpp>
 #include <cassert>
 #include <vector>
+#include <algorithm>
+#include <cstddef>
 
 template <typename Type> class Selectionsorter : public Sorter<Type> {
 public:

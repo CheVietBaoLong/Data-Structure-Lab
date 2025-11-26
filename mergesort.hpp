@@ -5,6 +5,8 @@
 #include <1klies/utilities.hpp>
 #include <cassert>
 #include <iostream>
+#include <algorithm>
+#include <cstddef>
 
 template <typename Type> class Mergesorter : public Sorter<Type> {
 public:
